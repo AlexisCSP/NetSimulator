@@ -1,0 +1,6 @@
+add_library(IPv4 ipv4.cpp ../include/NetSimulator/ipv4.h)
+add_library(Network network.cpp ../include/NetSimulator/network.h)
+add_library(Router router.cpp ../include/NetSimulator/router.h)
+add_library(RoutingTable routing_table.cpp ../include/NetSimulator/routing_table.h)
+# add_executable(demo main.cpp)
+# target_link_libraries(demo Sqr)
