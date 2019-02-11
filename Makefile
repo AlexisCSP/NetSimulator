@@ -122,19 +122,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Network
-
-# Build rule for target.
-Network: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Network
-.PHONY : Network
-
-# fast build rule for target.
-Network/fast:
-	$(MAKE) -f src/CMakeFiles/Network.dir/build.make src/CMakeFiles/Network.dir/build
-.PHONY : Network/fast
-
-#=============================================================================
 # Target rules for targets named Router
 
 # Build rule for target.
@@ -174,6 +161,32 @@ RoutingTable/fast:
 .PHONY : RoutingTable/fast
 
 #=============================================================================
+# Target rules for targets named Network
+
+# Build rule for target.
+Network: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Network
+.PHONY : Network
+
+# fast build rule for target.
+Network/fast:
+	$(MAKE) -f src/CMakeFiles/Network.dir/build.make src/CMakeFiles/Network.dir/build
+.PHONY : Network/fast
+
+#=============================================================================
+# Target rules for targets named Http
+
+# Build rule for target.
+Http: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Http
+.PHONY : Http
+
+# fast build rule for target.
+Http/fast:
+	$(MAKE) -f src/CMakeFiles/Http.dir/build.make src/CMakeFiles/Http.dir/build
+.PHONY : Http/fast
+
+#=============================================================================
 # Target rules for targets named IPv4Test
 
 # Build rule for target.
@@ -186,6 +199,19 @@ IPv4Test/fast:
 	$(MAKE) -f test/CMakeFiles/IPv4Test.dir/build.make test/CMakeFiles/IPv4Test.dir/build
 .PHONY : IPv4Test/fast
 
+#=============================================================================
+# Target rules for targets named HttpTest
+
+# Build rule for target.
+HttpTest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 HttpTest
+.PHONY : HttpTest
+
+# fast build rule for target.
+HttpTest/fast:
+	$(MAKE) -f test/CMakeFiles/HttpTest.dir/build.make test/CMakeFiles/HttpTest.dir/build
+.PHONY : HttpTest/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -195,11 +221,13 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... edit_cache"
-	@echo "... Network"
 	@echo "... Router"
 	@echo "... IPv4"
 	@echo "... RoutingTable"
+	@echo "... Network"
+	@echo "... Http"
 	@echo "... IPv4Test"
+	@echo "... HttpTest"
 .PHONY : help
 
 
